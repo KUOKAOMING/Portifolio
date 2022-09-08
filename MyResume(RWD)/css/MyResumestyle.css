@@ -1,0 +1,1011 @@
+html {
+    font-size: 16px;
+}
+
+
+/* --------------00nav Start-----------------------*/
+#navdiv {
+    background-color: rgba(46, 44, 112, 75%);
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: none;
+    flex-wrap: nowrap;
+    border-radius: 0px;
+    align-items: center;
+}
+
+
+#menu ul {
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#menu ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+#menu ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    color: rgb(247, 226, 104);
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+#menu ul li i {
+    padding-right: 10px;
+}
+
+#menu ul li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 242, 176);
+    margin: 0px auto;
+    transition: width 1s;
+}
+
+#menu ul li a:hover {
+    font-size: 1.5rem;
+    color: rgb(255, 242, 176);
+}
+
+#menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* --------------00nav END----------------- */
+
+/* ---------------title---------- */
+.title {
+    margin: 0px 40px;
+    border-bottom: 10px solid rgb(74, 83, 247);
+}
+
+.title h1 {
+    font-size: 4rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    color: rgb(74, 83, 247);
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* --------------01portifolio Start----------------- */
+#page01 {
+    background-color: rgba(217, 204, 205, 0.8);
+    padding: 80px 0px;
+}
+
+#page01 .container-md {
+    max-width: 1320px;
+    height: 1024px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4)30%, rgba(255, 255, 255, 0.3)60%, rgba(255, 255, 255, 0.1)90%), url(../img/Protifolio/01_background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.page01content {
+    width: 100%;
+    height: 750px;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+.page01cards {
+    position: absolute;
+    width: 680px;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    left: calc(50% - 340px);
+    overflow: hidden;
+}
+
+#btnPrev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    left: 10px;
+    top: 50%;
+    transition: all 0.5 ease-in-out;
+}
+
+#btnNext {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    right: 10px;
+    top: 50%;
+    transition: all 0.5 ease-in-out;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+    transform: scale(1.2);
+}
+
+.portifoliocard {
+    width: 600px;
+    height: 680px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 70%);
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+.portifoliocard img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.cardtext h3 {
+    color: rgb(112, 57, 185);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    padding: 20px;
+}
+
+.cardtext p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.cardbuttom {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 193, 7);
+    margin: 0px 0px 10px 20px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+.cardbuttom a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.cardbuttom p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.portifoliocard:hover {
+    margin-top: -50px;
+}
+
+.portifoliocard img:hover {
+    transform: scale(1.1);
+    object-position: right;
+}
+
+.cardbuttom:hover {
+    cursor: pointer;
+    background-color: rgb(74, 83, 247);
+}
+
+.cardbuttom a:hover {
+    color: white;
+}
+
+/*---------------01portifolio animate------------------*/
+.cardstranslate {
+    animation-name: Cardtranslate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes Cardtranslate {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(50% - 340px);
+    }
+}
+
+/* --------------01portifolio  END------------------ */
+/* --------------02work experience Start----------------- */
+#page02 {
+    width: 100%;
+    height: 2000px;
+    margin: 0px auto;
+    padding: 80px 0px;
+    background: url(../img/WorkExperience/page02backgroud-final.png);
+    background-size: cover;
+    position: relative;
+}
+
+
+section {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.job1 {
+    top: 400px;
+    justify-content: space-between;
+}
+
+
+.job2 {
+    top: 1000px;
+    flex-direction: row-reverse;
+}
+
+
+
+.job3 {
+    top: 1600px;
+}
+
+
+.job1_img img,
+.job2_img img,
+.job3_img img {
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+    border-radius: 30% 30%;
+    object-fit: cover;
+}
+
+.job1_img img:hover,
+.job2_img img:hover,
+.job3_img img:hover {
+    transform: scale(1.3);
+    border-radius: 20px 20px;
+}
+
+
+.jobtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    transition: all 1s ease-out;
+}
+
+
+
+
+.jobcontent {
+    width: 450px;
+    text-align: center;
+}
+
+.jobcontentlast {
+    width: 350px;
+    text-align: center;
+}
+
+
+.jobtext h3 {
+    color: rgb(112, 57, 185);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.jobtext h3:last-of-type {
+    margin-bottom: 20px;
+}
+
+.jobtext p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.jobtext:hover {
+    border-radius: 50% 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.jobtext:hover h3 {
+    color: rgb(233, 216, 255);
+}
+
+.jobtext:hover p {
+    color: rgb(255, 255, 255);
+}
+
+/* --------------02work experience END------------------ */
+/* --------------03skills Start----------------- */
+
+#page03 {
+    background-color: rgba(217, 204, 205, 0.8);
+    padding: 80px 0;
+}
+
+#page03 .container-md {
+    min-height: 1024px;
+    background: linear-gradient(rgba(0, 0, 0, 0)20%, rgba(0, 0, 0, 0.3)60%, rgba(0, 0, 0, 0.2)100%, rgba(255, 255, 255, 0.1)90%), url(../img/Skill/Page03background.png);
+    background-size: cover;
+    margin: 0, auto;
+}
+
+.page03content {
+    width: 100%;
+}
+
+
+.graduatedschool img {
+    width: 72px;
+    height: 72px;
+}
+
+
+
+.graduatedschool h2 {
+    font-size: 2rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    text-align: left;
+    color: rgb(86, 58, 240);
+}
+
+.graduatedschool h3 {
+    font-size: 1.5rem;
+    font-family: 'League Spartan', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(86, 58, 240);
+}
+
+.page03photo {
+    text-align: center;
+}
+
+.page03skill {
+    background-color: rgba(255, 255, 255, 0.42);
+    margin-top: 100px;
+}
+
+.page03subtilte {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid rgb(86, 58, 240);
+    margin-bottom: 10px;
+}
+
+.page03subtilte h2 {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    color: rgb(86, 58, 240);
+    margin-bottom: 0px;
+}
+
+.page03skill_list {
+    font-size: 1.2rem;
+    font-family: "微軟正黑體", sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.page03skill_list h3 {
+    font-family: 'Cabin Sketch', 'cursive';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(89, 0, 255);
+}
+
+.page03skill_list ul {
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.page03skill_list li {
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: 'Alata', 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+}
+
+.page03skill_list li p:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f005";
+    color: yellow;
+}
+
+/* --------------03skills END------------------ */
+/* --------------04career planning Start----------------- */
+
+#page04 {
+    width: 100vw;
+    max-height: 1024px;
+    margin: 0 auto;
+    padding: 40px 3.5vw;
+    background: url(../img/Careerplanning/Page04background.png);
+    background-size: cover;
+}
+
+#page04 .row {
+    height: 800px;
+}
+
+.Page04img {
+    position: relative;
+}
+
+.Page04img p {
+    position: absolute;
+    width: 280px;
+    font-size: 1.5rem;
+    font-family: 'Alata', 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 80px;
+    left: 0;
+    z-index: 0;
+    color: transparent;
+    text-shadow: -10px -10px 60px rgb(255, 115, 0), 0px 10px 150px rgb(245, 143, 11);
+    transition: all 1s ease-in-out;
+}
+
+.Page04img p::before {
+    content: "";
+    position: absolute;
+    background: url(../img/Careerplanning/Page04ballon.png);
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.Page04img:nth-of-type(1) p {
+    bottom: 160px;
+}
+
+.Page04img:nth-of-type(2) p {
+    bottom: 360px;
+}
+
+.Page04img:nth-of-type(3) p {
+    bottom: 560px;
+}
+
+.Page04img p:hover {
+    margin-bottom: 50px;
+    color: black;
+    text-shadow: -10px -10px 60px rgb(255, 38, 0), 0px 10px 150px rgb(233, 43, 116);
+}
+
+
+/* --------------04career planning END----------------- */
+/* --------------footer Start----------------- */
+#footer {
+    width: 100vw;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 3.5vw;
+    background-color: black;
+}
+
+.footertitle {
+    padding: 40px 40px;
+}
+
+.footertitle h1 {
+    font-size: 2.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+.footernav {
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footernav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.footernav li {
+    font-size: 1.5rem;
+    font-family: 'Alata', 'Noto Sans TC', sans-serif;
+    text-align: center;
+    line-height: 32px;
+    color: rgb(185, 185, 185);
+    display: flex;
+}
+
+.footernav li img {
+    width: 42px;
+    height: 32px;
+    padding-right: 10px;
+}
+
+/* --------------footer END------------------ */
+/* --------------------RWD start----------------------- */
+@media(max-width:1850px) {
+
+    /* 只調page02 */
+    .job1 {
+        top: 350px;
+    }
+
+    .job2 {
+        top: 900px;
+    }
+
+    .job3 {
+        top: 1500px;
+    }
+}
+
+@media(max-width:1650px) {
+
+    /* 只調page02 */
+    .job1 {
+        top: 300px;
+    }
+
+    .job2 {
+        top: 825px;
+    }
+
+    .job3 {
+        top: 1350px;
+    }
+
+}
+
+@media(max-width:1400px) {
+
+    /* 只調page02 */
+    .job1 {
+        top: 200px;
+    }
+
+    .job2 {
+        top: 700px;
+    }
+
+    .job3 {
+        top: 1200px;
+    }
+
+}
+
+@media(max-width:1200px) {
+
+    /* ----------------nav Start------------------ */
+    #menu ul li a {
+        font-size: 0px;
+    }
+
+    #menu ul li a i {
+        font-size: 2rem;
+    }
+
+    #menu ul li a:hover {
+        font-size: 1.5rem;
+    }
+
+    /* -----------------nav End-------------------- */
+    /* ----------------Page01 Start---------------- */
+    /* ----------------Page01 End------------------ */
+    /* ----------------Page02 Start-----------------*/
+    #page02 {
+        /* background: url(); */
+        background: linear-gradient(rgba(255, 255, 255, 0.4)30%, rgba(255, 255, 255, 0.3)60%, rgba(255, 255, 255, 0.1)90%),
+            url(../img/WorkExperience/page02backgroud-1200px.png);
+        background-size: cover;
+        height: 1500px;
+    }
+
+    .job1 {
+        top: 250px;
+    }
+
+    .job2 {
+        top: 650px;
+    }
+
+    .job3 {
+        top: 1050px;
+    }
+
+    .jobtext {
+        background-color: rgba(255, 255, 255, 0.30);
+        border-radius: 50px 50px;
+    }
+
+
+    /* ----------------Page02 End------------------ */
+    /* ----------------Page03 Start-----------------*/
+
+
+    /* ----------------Page03 End------------------*/
+    /* ----------------Page04 Start-----------------*/
+
+    /* ----------------Page04 End------------------ */
+    /* ----------------Page05 Start-----------------*/
+
+    /* ----------------Page05 End------------------ */
+}
+
+@media(max-width:992px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* ----------------nav Start------------------ */
+    /* -----------------nav End-------------------- */
+    /* ----------------Page01 Start---------------- */
+    /* ----------------Page01 End------------------ */
+    /* ----------------Page02 Start-----------------*/
+    .job1_img img,
+    .job2_img img,
+    .job3_img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .jobtext {
+        width: 600px;
+        height: 300px;
+    }
+
+    /* ----------------Page02 End------------------ */
+    /* ----------------Page03 Start-----------------*/
+    #page03 {
+        padding: 40px 0 80px 0;
+    }
+
+    #page03 .container-md {
+        padding-top: 40px;
+    }
+
+
+    .graduatedschool,
+    .page03language,
+    .page03skill {
+        margin-top: 50px;
+    }
+
+    .page03skill {
+        margin-bottom: 50px;
+    }
+
+    .page03language .page03skill_list {
+        text-align: center;
+    }
+
+    /* ----------------Page03 End------------------*/
+    /* ----------------Page04 Start-----------------*/
+
+    .Page04img p {
+        width: 240px;
+        font-size: 1.2rem;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    .Page04img p::before {
+        width: 240px;
+        height: 240px;
+    }
+
+    .Page04img:nth-of-type(1) p {
+        bottom: 120px;
+    }
+
+    .Page04img:nth-of-type(2) p {
+        bottom: 370px;
+    }
+
+    .Page04img:nth-of-type(3) p {
+        bottom: 620px;
+    }
+
+
+    /* ----------------Page04 End------------------ */
+    /* ----------------footer Start-----------------*/
+    .footertitle {
+        padding: 10px 40px;
+    }
+
+    .footernav ul {
+        flex-wrap: wrap;
+    }
+
+    .footernav li {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ----------------footer End------------------ */
+}
+
+@media(max-width:767px) {
+
+    /* ----------------nav Start------------------ */
+    #menu ul {
+        display: flex;
+    }
+
+
+    /* -----------------nav End-------------------- */
+    /* ----------------Page01 Start---------------- */
+    #page01 .container-md {
+        height: 150vw;
+    }
+
+    .page01content {
+        height: 120vw;
+    }
+
+    .page01cards {
+        width: 100vw;
+        height: 120vw;
+        left: 0%;
+    }
+
+    .portifoliocard {
+        width: 84vw;
+        height: 100vw;
+        margin-left: 8vw;
+        margin-right: 10vw;
+    }
+
+    .portifoliocard img {
+        width: 84vw;
+        height: 60vw;
+    }
+
+    .cardtext h3 {
+        font-size: 2rem;
+    }
+
+    .cardbuttom {
+        float: right;
+        margin-right: 20px;
+    }
+
+    @keyframes Cardtranslate {
+        from {
+            left: 100%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+    /* ----------------Page01 End------------------ */
+    /* ----------------Page02 Start-----------------*/
+    section {
+        flex-wrap: wrap;
+    }
+
+    .job1_img img,
+    .job2_img img,
+    .job3_img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .jobtext {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* ----------------Page02 End------------------ */
+    /* ----------------Page03 Start-----------------*/
+    /* ----------------Page03 End------------------*/
+    /* ----------------Page04 Start-----------------*/
+    .Page04img {
+        height: 260px;
+    }
+
+    .Page04img:nth-of-type(1) p {
+        bottom: 120px;
+        left: calc(50% - 120px);
+    }
+
+    .Page04img:nth-of-type(2) p {
+        bottom: 90px;
+        left: calc(50% - 120px);
+    }
+
+    .Page04img:nth-of-type(3) p {
+        bottom: 90px;
+        left: calc(50% - 120px);
+    }
+
+    /* ----------------Page04 End------------------ */
+    /* ----------------Page05 Start-----------------*/
+
+    /* ----------------Page05 End------------------ */
+}
+
+@media(max-width:575px) {
+    html {
+        font-size: 12px;
+    }
+
+    .title h1 {
+        font-size: 3rem;
+    }
+
+    /* ----------------nav Start------------------ */
+    #menu ul {
+        width: 60%;
+        position: absolute;
+        flex-wrap: wrap;
+        background-color: rgba(46, 44, 112, 75%);
+        border-radius: 0px 0px 5px 5px;
+        padding-left: 0;
+        left: 0;
+        top: 80px;
+        display: none;
+    }
+
+
+    #menu ul li {
+        width: 100%;
+        border: 3px solid rgba(157, 155, 223, 0.75);
+        border-bottom: none;
+        padding: 10px;
+    }
+
+    #menu ul li:last-of-type {
+        border-bottom: 3px solid rgba(157, 155, 223, 0.75);
+    }
+
+    #menu ul li:hover {
+        background-color: rgb(39, 37, 97);
+    }
+
+    #menu ul li a {
+        font-size: 1.2rem;
+    }
+
+    #menu ul li a:hover {
+        font-size: 1.4rem;
+    }
+
+    #navlist {
+        font-size: 2rem;
+        color: rgb(247, 226, 104);
+    }
+
+    #navlist:active {
+        font-size: 2.5rem;
+        color: rgb(255, 242, 176);
+        margin-top: -10px;
+    }
+
+    /* -----------------nav End-------------------- */
+    /* ----------------Page01 Start---------------- */
+    .portifoliocard img {
+        width: 84vw;
+        height: 70vw;
+    }
+
+    #btnPrev,
+    #btnNext {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cardtext h3 {
+        padding-top: 10px;
+        padding-bottom: 0;
+        font-size: 2rem;
+    }
+
+    .cardbuttom p {
+        font-size: 1rem;
+    }
+
+    /* ----------------Page01 End------------------ */
+    /* ----------------Page02 Start-----------------*/
+    section {
+        height: 450px;
+        justify-content: center;
+    }
+
+    .job1 {
+        top: 200px;
+        justify-content: center;
+    }
+
+    .job2 {
+        top: 650px;
+    }
+
+    .job3 {
+        top: 1100px;
+        height: 400px;
+    }
+
+    .job3 .jobtext {
+        height: 200px;
+    }
+
+    .jobtext h3 {
+        margin-bottom: 0px;
+    }
+
+    .jobtext h3:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .jobtext p {
+        margin-bottom: 0;
+    }
+
+    .jobtext:hover {
+        border-radius: 20px 20px;
+    }
+
+    /* ----------------Page02 End------------------ */
+    /* ----------------Page03 Start-----------------*/
+
+    /* ----------------Page03 End------------------*/
+    /* ----------------Page04 Start-----------------*/
+    /* ----------------Page04 End------------------ */
+    /* ----------------Page05 Start-----------------*/
+    /* ----------------Page05 End------------------ */
+}

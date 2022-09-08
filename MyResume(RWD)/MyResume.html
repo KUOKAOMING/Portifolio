@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/MyResumestyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Cabin+Sketch:wght@700&family=League+Spartan:wght@800&family=Noto+Sans+TC:wght@500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c83334f0e3.js" crossorigin="anonymous"></script>
+  <title>Kao-Ming Resume </title>
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/MyResume.js"></script>
+</head>
+
+<body>
+  <!-- 00 nav start -->
+  <div class="container-fluid" id="navdiv">
+    <div class="container">
+      <nav id="menu">
+        <i id="navlist" class="fa-solid fa-list-ul d-block d-sm-none"></i>
+        <ul>
+          <li><a href="./ResumeHomePage.html"><i class="fa-solid fa-house-chimney-user"></i>About Me</a></li>
+          <li><a href="#page01"><i class="fa-solid fa-address-card"></i>My Portfolio</a></li>
+          <li><a href="#page02"><i class="fa-solid fa-suitcase-medical"></i>Work Experience </a></li>
+          <li><a href="#page03"><i class="fa-regular fa-keyboard"></i>Skills & Certificates </a></li>
+          <li><a href="#page04"><i class="fa-solid fa-rocket"></i>Career planning</a></li>
+          <li><a href="#footer"><i class="fa-solid fa-square-phone"></i>Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- 00 nav end -->
+  <!-- 01 page start -->
+  <div class="container-fluid" id="page01">
+    <div class="container-md">
+      <div class="title">
+        <h1>My Portifolio</h1>
+      </div>
+      <div class="page01content">
+        <div class="page01cards cardstranslate">
+          <div class="portifoliocard" id="portifoliocard01">
+            <div><img src="./img/Protifolio/01_FigmaDesignWork.PNG"></div>
+            <div class="cardtext">
+              <h3>RWD Portfolio</h3>
+              <p class=" d-none d-sm-block">利用Figma規劃設計網站UI、UX，並編排不同尺寸時網頁的排版樣式及動畫效果。</p>
+            </div>
+            <div class="cardbuttom">
+              <a href="#">
+                <p>點我看更多</p>
+              </a>
+            </div>
+          </div>
+          <div class="portifoliocard" id="portifoliocard02">
+            <div><img src="./img/Protifolio/01_MyResumeWork01.PNG"></div>
+            <div class="cardtext">
+              <h3>RWD Portfolio</h3>
+              <p class=" d-none d-sm-block">根據Figma設計，及HTML&CSS技巧建置符合想像的RWD網頁，並用JQuary來呈現動態網頁效果</p>
+            </div>
+            <div class="cardbuttom">
+              <a href="#">
+                <p>點我看更多</p>
+              </a>
+            </div>
+          </div>
+          <div class="portifoliocard" id="portifoliocard03">
+            <div><img src="./img/Protifolio/01_photowork.png"></div>
+            <div class="cardtext">
+              <h3>新年新希望</h3>
+              <p class="d-none d-sm-block">利用Photoshop軟體工具，上述作品是將不同新年意象結合而構成視覺藝術圖，表達對新的一年的期待與盼望。 </p>
+            </div>
+            <div class="cardbuttom">
+              <a href="#">
+                <p>點我看更多</p>
+              </a>
+            </div>
+          </div>
+          <div class="portifoliocard" id="portifoliocard04">
+            <div><img src="./img/Protifolio/01_illustwork.png"></div>
+            <div class="cardtext">
+              <h3>流星雨</h3>
+              <p class=" d-none d-sm-block">利用illustrator軟體完成排版設計。上述作品是透過廢棄房屋、荒郊野外的背景圖和流星雨完成拼接， 凸顯流星雨時的絢麗。 </p>
+            </div>
+            <div class="cardbuttom">
+              <a href="#">
+                <p>點我看更多</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img id="btnPrev" src="./img/icons/iconsPrev.jpg">
+        <img id="btnNext" src="./img/icons/iconsNext.jpg">
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 page end -->
+  <!-- 02 page start -->
+  <div class="container-fluid" id="page02">
+    <div class="title">
+      <h1>Work Experience</h1>
+    </div>
+    <section class="job1">
+      <div class="job1_img"><img src="./img/WorkExperience/job1img.jpg"></div>
+      <div class="jobtext">
+        <img class="d-none d-lg-block" style="transform :scaleX(-1)" src="./img/WorkExperience/Page02milestone.png"
+          width="100" height="125">
+        <div class="jobcontent">
+          <h3>2022-06 ~ 目前</h3>
+          <h3>網頁前端工程師-健行科大網頁前端工程師實戰班</h3>
+          <p>因疫情因素決定轉職，朝前端工程師邁進</p>
+          <p>能使用HTML5&CSS3完成RWD網頁設計排版</p>
+          <p>使用Photoshop與Illustrator完成UI介面視覺設計</p>
+          <p>Javascript、ReactJS學習中</p>
+        </div>
+      </div>
+    </section>
+    <section class="job2">
+      <div class="job2_img"><img src="./img/WorkExperience/job2img.jpg"></div>
+      <div class="jobtext">
+        <img class="d-none d-lg-block" style="transform :scaleX(-1)" src="./img/WorkExperience/Page02milestone.png"
+          width="100" height="125">
+        <div class="jobcontent">
+          <h3>2018-08 ~ 2022-06</h3>
+          <h3>物理治療師-社團法人藝家人居家長照機構</h3>
+          <p>回台中轉型為自費接案的物理治療師</p>
+          <p>國建署舞動不老方案種子師資</p>
+          <p>長期照護醫事人員繼續教育計畫物理治療Level II & III課程講師</p>
+          <p>台中沙鹿童綜合醫院失智症照護中心延緩失能計畫講師</p>
+          <p>甲類輔具評估人員</p>
+          <div>
+          </div>
+    </section>
+    <section class="job3">
+      <div class="job3_img"><img src="./img/WorkExperience/job3img.png"></div>
+      <div class="jobtext">
+        <div class="jobcontentlast">
+          <h3>2015-11 ~ 2018-04 </h3>
+          <h3>物理治療師-桃園聯新國際醫院</h3>
+          <p>從國立成功大學物理治療系畢業</p>
+          <p> 在醫院接受物理治療師PGY訓練</p>
+        </div>
+        <img class="d-none d-lg-block" src="./img/WorkExperience/Page02milestone.png" width="100" height="125">
+      </div>
+    </section>
+  </div>
+
+  <!-- 02 page end -->
+  <!-- 03 page start -->
+  <div class="container-fluid" id="page03">
+    <div class="container-md">
+      <div class="title">
+        <h1>Skills & Certificates</h1>
+      </div>
+      <div class="page03content">
+        <div class="row justify-content-center ">
+          <div class="graduatedschool col-lg-6 col-sm-10 ">
+            <h2><img src="./img/icons/Mortarboard.png">國立成功大學</h2>
+            <h3>物理治療學系 學士</h3>
+            <h3>201109 ~ 201406</h3>
+          </div>
+          <div class="page03language col-lg-6 col-sm-10 ">
+            <div class="page03subtilte">
+              <img src="./img/icons/Earth Planet.png">
+              <h2>Language</h2>
+            </div>
+            <div class="page03skill_list">
+              <p>國語 ⺟語 Native</p>
+              <p>台語 ⽣活會話 Conversational</p>
+              <p>英語 ⽣活會話 Conversational</p>
+              <p>較擅⻑閱讀，能完成簡單⽣活對話</p>
+            </div>
+          </div>
+          <div class="page03photo col-lg-6 d-none d-lg-block">
+            <img src="./img/Skill/page03photo.png">
+          </div>
+          <div class="page03skill col-lg-6 col-sm-10">
+            <div class="page03subtilte">
+              <img src="./img/icons/Certificate.png">
+              <h2>Skills</h2>
+            </div>
+            <div class="page03skill_list">
+              <h3>HTML & CSS</h3>
+              <ul></ul>
+              <li>
+                <p>freeCampcode RWD網站課程認證</p>
+              </li>
+              <li>
+                <p>利⽤HTML、CSS獨⽴設計⾃⼰履歷的RWD網⾴</p>
+              </li>
+              <h3>Photoshop & Illustrator</h3>
+              <ul></ul>
+              <li>
+                <p>使⽤Photoshop & Illustrator等軟體製作廣告banner和活動主視覺等素材
+                </p>
+              </li>
+              <li>
+                <p>使⽤Illustrator完成網⾴排版設計及icons元件設計。</p>
+              </li>
+              <h3>Microsoft Office</h3>
+              <ul></ul>
+              <li>
+                <p>從過去的⼯作經驗裡⾯學會了如何製作精美的PowerPoint簡報技巧</p>
+              </li>
+              <li>
+                <p>在過去工作承接專案過程中學會⽤excel製作⼯作時程表(⽢特圖)及數據整理等技巧</p>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 page end -->
+  <!-- 04 page start -->
+  <div class="container-fluid" id="page04">
+    <div class="title">
+      <h1>Career planning</h1>
+    </div>
+    <div class="row">
+      <div class="col-xl-3 col-md-4 col-sm-12 Page04img">
+        <p>充實自己<br>精進工作所需程式語言</p>
+      </div>
+      <div class="col-xl-3 col-md-4 col-sm-12 Page04img">
+        <p>開拓視野<br>和不同專業合作<br>擴展專業知識</p>
+      </div>
+      <div class="col-xl-3 col-md-4 col-sm-12 Page04img">
+        <p>協同合作<br>全力以赴完成團隊專案</p>
+      </div>
+    </div>
+  </div>
+  <!-- 04 page end -->
+  <footer>
+    <div id="footer">
+      <div class="footertitle">
+        <h1>Contact Me</h1>
+      </div>
+      <div class="footernav">
+        <ul>
+          <li>
+            <img src="./img/icons/Phone.png" alt="phone">
+            <p>0926738160</p>
+          </li>
+          <li>
+            <img src="./img/icons/Address.png" alt="address">
+            <p>台中市西屯區大石里皇城街59巷15號</p>
+          </li>
+          <li>
+            <img src="./img/icons/Mail.png" alt="mail">
+            <p>kevin0926738160@gmail.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

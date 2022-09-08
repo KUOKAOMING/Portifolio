@@ -1,0 +1,437 @@
+/*---------------------01pageOpenAnimate------------------------- */
+body {
+    position: relative;
+}
+
+.Animate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+.Animate h1 {
+    position: absolute;
+    top: calc(50%-48px);
+    left: 25%;
+    font-size: 96px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    color: white;
+    opacity: 0;
+}
+
+.Animate span {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 242, 176);
+}
+
+.OpenAnimate {
+    animation-name: page01_OpenAnimate;
+    animation-duration: 5.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+
+}
+
+.h1Animate {
+    animation-name: page01_h1;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+.SpanAnimate {
+    animation-name: page01_span;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+
+}
+
+
+@keyframes page01_OpenAnimate {
+    0% {
+        width: 0%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    25% {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    90% {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    99% {
+        width: 100%;
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes page01_h1 {
+    0% {
+        top: 60%;
+        opacity: 0;
+    }
+
+    35% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    90% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 40%;
+        opacity: 0;
+    }
+}
+
+@keyframes page01_span {
+    0% {
+        font-size: 96px;
+        color: rgb(255, 242, 176);
+    }
+
+    25% {
+        font-size: 115px;
+        color: rgb(233, 139, 62);
+    }
+
+    50% {
+        font-size: 96px;
+        color: rgb(255, 242, 176);
+    }
+
+    75% {
+        font-size: 115px;
+        color: rgb(233, 139, 62);
+    }
+
+    100% {
+        font-size: 96px;
+        color: rgb(255, 242, 176);
+    }
+}
+
+
+
+/* -----------------01pageCover-------------- */
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#home {
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circleBig {
+    width: 880px;
+    height: 880px;
+    border: 10px solid rgb(0, 56, 255);
+    border-radius: 100% 100%;
+    position: relative;
+    left: -200px;
+}
+
+.circlesmall>img {
+    width: 720px;
+    height: 720px;
+    border-radius: 100% 100%;
+    position: absolute;
+    object-fit: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%, -50%);
+}
+
+.circleBig::after {
+    content: "";
+    border-top: 1024px solid white;
+    border-left: 200px solid white;
+    position: absolute;
+    left: -10px;
+    /* after在circleBig border裡面 故中心點左右位置差circleBig的border */
+    top: -72px;
+    /* 中心點上下位置差circleBig的border和page01和circleBig的置中高度差
+    也就是-10px+(900-1024)/2 = -10px + (-62)px = -72px */
+}
+
+a {
+    text-decoration: none;
+}
+
+.circlenav {
+    width: 450px;
+    height: 120px;
+    display: flex;
+    position: absolute;
+    /* icon對其圓心位置 */
+    left: 380px;
+    /* (10+10+50,10+10+50)(小圓圓心還要加上大圓的border) (大圓圓心)(450,450-->borderbox) */
+    top: 380px;
+}
+
+.icons {
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(0, 56, 255);
+    border-radius: 100% 100%;
+    background-color: rgb(128, 128, 128);
+    text-align: center;
+    color: white;
+}
+
+.icons i {
+    font-size: 64px;
+    line-height: 100px;
+}
+
+.navtext {
+    text-align: center;
+    visibility: hidden;
+}
+
+.navtext p {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Cabin Sketch', sans-serif;
+    line-height: 120px;
+    margin: 0;
+    padding-left: 16px;
+}
+
+a:hover .icons {
+    background-color: black;
+    color: rgb(255, 242, 176);
+}
+
+a:hover i {
+    margin-top: -10px;
+}
+
+a:hover .navtext {
+    visibility: visible;
+}
+
+.introduction {
+    padding-right: 50px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.introduction h1 {
+    font-size: 96px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    color: rgb(103, 41, 181);
+    margin-bottom: 30px;
+}
+
+.introduction p {
+    font-size: 24px;
+    font-family: 'Alata', 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* ---------------------Animate----------------------------------> */
+.OpacityAnimate {
+    animation-name: page01_opacity;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+}
+
+.ChgBackground {
+    animation-name: page01_ChgBackground;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.TextAnimate {
+    animation-name: page01_text_move;
+    animation-duration: 12s;
+    animation-iteration-count: 1;
+}
+
+
+
+
+
+@keyframes page01_opacity {
+    0% {
+        opacity: 0;
+    }
+
+    72% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes page01_ChgBackground {
+    0% {
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    10% {
+        background: linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    15% {
+        background: linear-gradient(rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.26)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    20% {
+        background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    25% {
+        background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    30% {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    35% {
+        background: linear-gradient(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    40% {
+        background: linear-gradient(rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.66)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    43% {
+        background: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    48% {
+        background: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    50% {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/HomePage/01_sea_img.png);
+    }
+
+    51% {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    56% {
+        background: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    58% {
+        background: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    62% {
+        background: linear-gradient(rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.66)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    65% {
+        background: linear-gradient(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    70% {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    75% {
+        background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    80% {
+        background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    85% {
+        background: linear-gradient(rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.26)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    90% {
+        background: linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)), url(../img/HomePage/01_ballon_img.png);
+    }
+
+    100% {
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/HomePage/01_ballon_img.png);
+    }
+}
+
+@keyframes page01_text_move {
+
+    /* from {margin-top:200px;}to{margin-top:0px;} */
+    0% {
+        margin-top: 400px;
+        opacity: 0;
+    }
+
+    75% {
+        margin-top: 400px;
+        opacity: 0;
+    }
+
+    80% {
+        margin-top: 400px;
+        opacity: 0.3;
+    }
+
+    90% {
+        margin-top: -100px;
+        opacity: 0.5;
+    }
+
+    95% {
+        margin-top: 50px;
+        opacity: 1;
+    }
+
+    99% {
+        margin-top: -50px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
