@@ -12,18 +12,30 @@ function navlistJudge() {
 //用addClass 權限會輸給上inline增加的display:flex進而沒有效果//
 
 function navlistShow() {
-  $("#navlist").click(function () {
-    $("#menu ul").stop(true, true).slideDown(700);
-  });
+
+  $("#navlist").click(function (){
+    var menulist = $(this).next();
+      if($(menulist).hasClass("hide")){
+        $(menulist).stop(true, true).slideDown(700)
+        $(menulist).removeClass('hide');
+      } else {
+        $(menulist).stop(true, true).slideUp(700);
+        $(menulist).addClass('hide');
+    }
+  })
 }
-function navlistHide() {
-  //一定要判斷!!!不然RWD回去>575px時，#menu ul會slideUp然後消失!!
-  if ($("#navlist").is(":visible")) {
-    $("#menu ul").mouseleave(function () {
-      $("#menu ul").stop(true, true).slideUp(700);
-    });
-  }
-}
+
+
+// function navlistHide() {
+//   if(!($("#menu ul").hasClass("hide"))){
+//     $("#menu ul").mouseout(function () {
+//       $("#menu ul").stop(true, true).slideUp(700);
+//       $("#menu ul").addClass('hide');
+//     });
+//   }
+// }
+
+
 // -------------------------navrEnd-------------------------------//
 // -------------------------page01Start----------------------------//
 var CardIndex = 1;
@@ -47,16 +59,6 @@ function Cardshow() {
     .fadeIn(2000);
 }
 
-function Cardturnaround() {
-  timer = setInterval(fnNext, 7000);
-  $(".portifoliocard").mouseenter(function () {
-    clearInterval(timer);
-  });
-  $(".portifoliocard").mouseleave(function () {
-    timer = setInterval(fnNext, 7000);
-  });
-}
-
 function fnPrev() {
   CardIndex--;
   Cardshow();
@@ -70,13 +72,26 @@ function fnNext() {
   Cardshow();
   btnshow();
 }
+
+function Cardturnaround() {
+  timer = setInterval(fnNext, 7000);
+  $(".portifoliocard").mouseenter(function () {
+    clearInterval(timer);
+  });
+  $(".portifoliocard").mouseleave(function () {
+    timer = setInterval(fnNext, 7000);
+  });
+}
+
+
+
+
 // -------------------------Page01End----------------------------------//
 
 $(document).ready(function () {
   //------------------------nav-----------------------
   $(window).resize(navlistJudge);
   navlistShow();
-  navlistHide();
   // -------------------------Page01Start-------------------------------//
   btnshow();
   $("#btnPrev").on("click", fnPrev);
