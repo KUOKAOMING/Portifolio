@@ -889,6 +889,10 @@ section {
     }
 
     /* ----------------nav Start------------------ */
+
+    .hide {
+        display: none;
+    }
     #menu ul {
         width: 60%;
         position: absolute;
@@ -898,9 +902,8 @@ section {
         padding-left: 0;
         left: 0;
         top: 80px;
-        display: none;
     }
-
+    
 
     #menu ul li {
         width: 100%;
